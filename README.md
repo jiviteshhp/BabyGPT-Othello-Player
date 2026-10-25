@@ -126,7 +126,14 @@ python -m pip install 'torch>=2.6,<3' --index-url https://download.pytorch.org/w
 python -m pip install -r requirements.txt
 ```
 
-**Weights are planned for a separate Hugging Face release; no download URL is published here yet.** With a local copy of `babygpt_20M.pt`, inspect next-move probabilities on CPU:
+**[Download the checkpoints and read the model card on Hugging Face](https://huggingface.co/jiviteshhp/BabyGPT-Othello).** To download the final checkpoint into the expected local directory:
+
+```bash
+python -m pip install huggingface_hub
+hf download jiviteshhp/BabyGPT-Othello babygpt_20M.pt --local-dir babygpt_checkpoints
+```
+
+With a local copy of `babygpt_20M.pt`, inspect next-move probabilities on CPU:
 
 ```bash
 python evaluate.py predict --checkpoint babygpt_checkpoints/babygpt_20M.pt \
@@ -224,7 +231,7 @@ BabyGPT-Othello-Player/
 └── assets/board_comparison.png
 ```
 
-Datasets, checkpoints, activation arrays, saved probes, and run outputs are ignored by Git. The small board visualization is included. Trained weights will be hosted separately from this code repository.
+Datasets, checkpoints, activation arrays, saved probes, and run outputs are ignored by Git. The small board visualization is included. Trained weights are hosted on [Hugging Face](https://huggingface.co/jiviteshhp/BabyGPT-Othello); [MODEL_CARD.md](MODEL_CARD.md) is the source of the Hub model card.
 
 ## Limitations
 

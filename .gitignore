@@ -1,6 +1,7 @@
 # Training data, weights and activation caches stay local.
 babygpt_data/
 babygpt_checkpoints/
+.venv-hf/
 babygpt_features/
 data/
 checkpoints/
