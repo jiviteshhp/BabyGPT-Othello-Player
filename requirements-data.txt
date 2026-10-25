@@ -1,0 +1,6 @@
+# Only needed to download MetaOthello's move sequences.
+-r requirements.txt
+xarray>=2024.1
+zarr>=2.18,<3
+huggingface_hub>=0.24
+fsspec>=2024.2
